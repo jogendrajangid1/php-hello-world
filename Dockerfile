@@ -1,2 +1,4 @@
-FROM nginx:alpine
-ADD hello-world.html /usr/share/nginx/html/index.html
+FROM php:7.0-apache
+COPY src/ /var/www/html
+EXPOSE 80
+
