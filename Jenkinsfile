@@ -27,7 +27,7 @@ node {
               }    
 
       stage ('Application health check - Ubuntu node 1') {
-             sh "sudo -u jenkins ssh -i/home/ubuntu/id_rsa ubuntu@172.31.42.68 curl -m 2 http://localhost"
+             sh " ssh -i/home/ubuntu/id_rsa ubuntu@172.31.42.68 curl -m 2 http://localhost"
         }
 
              stage('Deployment Ubuntu node 2') {
@@ -37,7 +37,7 @@ node {
               }    
 
       stage ('Application health check - Ubuntu node 3') {
-             sh "sudo -u jenkins ssh -i/home/ubuntu/id_rsa ubuntu@172.31.33.132 curl -m 2 http://localhost"
+             sh " ssh -i/home/ubuntu/id_rsa ubuntu@172.31.33.132 curl -m 2 http://localhost"
         }
 
              stage('Deployment Ubuntu node 3') {
@@ -47,8 +47,6 @@ node {
               }    
 
       stage ('Application health check - Ubuntu node 3') {
-             sh "sudo -u jenkins ssh -i/home/ubuntu/id_rsa ubuntu@172.31.47.97 curl -m 2 http://localhost"
+             sh "ssh -i/home/ubuntu/id_rsa ubuntu@172.31.47.97 curl -m 2 http://localhost"
         }
-
- 
     }
