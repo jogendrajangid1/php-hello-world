@@ -1,4 +1,5 @@
 FROM nginx
-COPY src/ /var/www/html
+COPY src/ /usr/share/nginx/html/
+ADD default.conf  /etc/nginx/conf.d/default.conf
 EXPOSE 80
 
